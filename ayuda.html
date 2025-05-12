@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayuda | StockIT</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logo">Stock-IT</div>
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="sobre.html">Sobre Nosotros</a>
+          <a href="productos.html">Productos</a>
+          <a href="ayuda.html">Ayuda</a> 
+          <a href="contacto.html">Contacto</a>
+        </div>
+      </nav>
+  </header>
+
+  <main class="contenedor">
+    <h1 class="titulo-principal">Centro de Ayuda</h1>
+    <p>Encuentra respuestas a las preguntas más frecuentes sobre nuestros productos, procesos y servicio.</p>
+
+    <section class="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <ul>
+        <li><strong>¿Puedo elegir varios componentes?</strong> Sí, puedes seleccionar hasta 20 componentes para tu caja personalizada.</li>
+        <li><strong>¿Cómo se clasifica la caja?</strong> Según la cantidad de componentes seleccionados, de básica a premium.</li>
+        <li><strong>¿Se guarda mi información?</strong> No, actualmente esta página es solo decorativa y no almacena datos.</li>
+        <li><strong>¿Puedo solicitar soporte técnico?</strong> Aún no está disponible, pero puedes contactarnos desde la sección “Contacto”.</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="faq-footer">
+    <div class="faq-box">
+      <h2>¿Tienes una duda rápida?</h2>
+      <p>Haz una pregunta y obtén una respuesta al instante:</p>
+  
+      <form id="faq-form" onsubmit="return false;">
+        <input type="text" id="faq-input" placeholder="Escribe tu pregunta aquí..." required />
+        <button type="submit" class="btn-falso">Preguntar</button>
+      </form>
+  
+      <div id="faq-response" class="faq-response"></div>
+    </div>
+  </footer>
+  <script>
+    const form = document.getElementById('faq-form');
+    const input = document.getElementById('faq-input');
+    const responseBox = document.getElementById('faq-response');
+  
+    const respuestas = [
+      "¡Gracias por tu pregunta! Nuestro equipo te responderá pronto.",
+      "Esa es una excelente pregunta. Actualmente estamos trabajando en esa función.",
+      "Puedes encontrar más información en la sección superior de esta página.",
+      "Por el momento esta funcionalidad es decorativa, pero agradecemos tu interés.",
+      "Estamos aquí para ayudarte. ¡Gracias por escribirnos!"
+    ];
+  
+    form.addEventListener('submit', () => {
+      const pregunta = input.value.trim();
+      if (pregunta !== "") {
+        const respuesta = respuestas[Math.floor(Math.random() * respuestas.length)];
+        responseBox.innerHTML = `<p><strong>Tu pregunta:</strong> ${pregunta}</p><p><strong>Respuesta:</strong> ${respuesta}</p>`;
+        input.value = "";
+      }
+    });
+  </script>
+  
+</body>
+</html>
+

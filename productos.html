@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos - Stock-IT</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Stock-IT</div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="sobre.html">Sobre Nosotros</a>
+        <a href="productos.html">Productos</a>
+        <a href="ayuda.html">Ayuda</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Elige un componente</h1>
+    <p>Selecciona un solo componente para generar el código QR de tu caja personalizada.</p>
+    
+    <div class="components" id="components"></div>
+    
+    <button class="btn" onclick="generateQR()">Generar QR</button>
+    
+    <div class="result" id="result"></div>
+    <div id="qr-container" style="margin-top: 1rem; text-align: center;"></div>
+  </main>
+
+  <script src="js/clasificador.js"></script>
+</body>
+</html>
