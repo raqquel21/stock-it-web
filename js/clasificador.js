@@ -33,8 +33,11 @@ function generateQR() {
   const result = document.getElementById("result");
   const qr = document.getElementById("qr-container");
 
+  const lang = localStorage.getItem('lang') || 'es';
+  const t = translations[lang];
+
   if (!selected) {
-    result.innerHTML = "⚠️ Debes seleccionar un componente.";
+    result.innerHTML = t.noComponent;
     qr.innerHTML = "";
     return;
   }
@@ -42,6 +45,6 @@ function generateQR() {
   const index = parseInt(selected.id.split("-")[1]);
   const comp = components[index];
 
-  result.innerHTML = `Has seleccionado: <strong>${comp.name}</strong>`;
+  result.innerHTML = `${t.selected} <strong>${comp.name}</strong>`;
   qr.innerHTML = `<img src="img/qr/${comp.qr}.png" alt="QR de ${comp.name}" style="max-width: 200px;" />`;
 }

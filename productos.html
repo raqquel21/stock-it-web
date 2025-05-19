@@ -9,13 +9,23 @@
 <body>
   <header>
     <nav>
-      <div class="logo">Stock-IT</div>
-      <div class="nav-links">
+      <a href="index.html" class="logo">Stock-IT</a>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="nav-links" id="navLinks">
         <a href="index.html">Inicio</a>
         <a href="sobre.html">Sobre Nosotros</a>
         <a href="productos.html">Productos</a>
         <a href="ayuda.html">Ayuda</a>
         <a href="contacto.html">Contacto</a>
+<div class="language-selector">
+  <button id="current-lang" onclick="toggleLangMenu()">🌐 Español ▾</button>
+  <div id="lang-options" class="lang-menu hidden">
+    <div onclick="setLanguage('es')">Español</div>
+    <div onclick="setLanguage('en')">English</div>
+  </div>
+</div>
+
+
       </div>
     </nav>
   </header>
@@ -33,5 +43,11 @@
   </main>
 
   <script src="js/clasificador.js"></script>
+  <script src="js/idioma.js"></script>
+  <script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+  </script>
 </body>
 </html>

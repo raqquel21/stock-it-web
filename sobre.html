@@ -9,8 +9,9 @@
 <body>
   <header>
     <nav>
-      <div class="logo">Stock-IT</div>
-      <div class="nav-links">
+      <a href="index.html" class="logo">Stock-IT</a>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="nav-links" id="navLinks">
         <a href="index.html">Inicio</a>
         <a href="sobre.html">Sobre Nosotros</a>
         <a href="productos.html">Productos</a>
@@ -25,5 +26,10 @@
       En stockIT somos especialistas en hardware de alto rendimiento. Nuestro objetivo es ofrecer soluciones prácticas para clasificar, seleccionar y ensamblar componentes tecnológicos de forma eficiente.
     </p>
   </main>
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
 </body>
 </html>

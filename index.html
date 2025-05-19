@@ -14,8 +14,9 @@
     </div>
   <header>
     <nav>
-      <div class="logo">Stock-IT</div>
-      <div class="nav-links">
+      <a href="index.html" class="logo">Stock-IT</a>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="nav-links"  id="navLinks">
         <a href="index.html">Inicio</a>
         <a href="sobre.html">Sobre Nosotros</a>
         <a href="productos.html">Productos</a> <!-- Cambiar esto por productos1-->
@@ -27,7 +28,7 @@
   <main>
     <h1 class="titulo-principal">Bienvenidos a StockIT</h1>
     <p>Expertos en soluciones tecnológicas y clasificación de componentes.</p> <!-- CAMBIAR ESTA PARTE-->
-    <p>(NOTA) aqui podría poner fotos de nuestro proyecto y videos del funcionamiento</p>
+    <p>Automatizar no es quitar empleos, es potenciar personas y optimizar procesos</p>
   </main>
   <footer class="newsletter-section">
     <div class="newsletter-container">
@@ -40,5 +41,10 @@
     </div>
   </footer>
   <div style="height: 80px;"></div>
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
 </body>
 </html>
