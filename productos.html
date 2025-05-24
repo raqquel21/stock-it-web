@@ -17,23 +17,15 @@
         <a href="productos.html">Productos</a>
         <a href="ayuda.html">Ayuda</a>
         <a href="contacto.html">Contacto</a>
-<div class="language-selector">
-  <button id="current-lang" onclick="toggleLangMenu()">🌐 Español ▾</button>
-  <div id="lang-options" class="lang-menu hidden">
-    <div onclick="setLanguage('es')">Español</div>
-    <div onclick="setLanguage('en')">English</div>
-  </div>
-</div>
-
-
       </div>
     </nav>
   </header>
 
   <main>
-    <h1>Elige un componente</h1>
-    <p>Selecciona un solo componente para generar el código QR de tu caja personalizada.</p>
-    
+    <section class="hero">
+      <h1 class="titulo-principal animate-letters">Elige un componente</h1>
+      <p class = "animate-letters">Selecciona un solo componente para generar el código QR de tu caja personalizada.</p>
+    </section>
     <div class="components" id="components"></div>
     
     <button class="btn" onclick="generateQR()">Generar QR</button>
@@ -43,7 +35,6 @@
   </main>
 
   <script src="js/clasificador.js"></script>
-  <script src="js/idioma.js"></script>
   <script>
   function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("show");

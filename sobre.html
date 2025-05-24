@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sobre Nosotros - stockIT</title>
   <link rel="stylesheet" href="css/estilo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-X..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <header>
@@ -20,16 +21,106 @@
       </div>
     </nav>
   </header>
+
   <main>
-    <h1>Sobre Nosotros</h1>
-    <p>
-      En stockIT somos especialistas en hardware de alto rendimiento. Nuestro objetivo es ofrecer soluciones prácticas para clasificar, seleccionar y ensamblar componentes tecnológicos de forma eficiente.
-    </p>
+    <section class="hero">
+      <h1 class="animate-letters">Sobre Nosotros</h1> 
+      <p class="animate-letters">Soluciones de hardwar  e inteligentes, adaptadas al futuro.</p>  
+    </section>
+
+    <div class="about-cards">
+      <div class="about-card" onclick="openModal('modal1')">
+        <i class="fas fa-microchip"></i>
+        <h3>Tecnología</h3>
+        <p>Rendimiento sin límites.</p>
+      </div>
+
+      <div class="about-card" onclick="openModal('modal2')">
+        <i class="fas fa-users-cog"></i>
+        <h3>Equipo</h3>
+        <p>Profesionales dedicados.</p>
+      </div>
+
+      <div class="about-card" onclick="openModal('modal3')">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovación</h3>
+        <p>Soluciones inteligentes.</p>
+      </div>
+
+      <div class="about-card" onclick="openModal('modal4')">
+        <i class="fas fa-shipping-fast"></i>
+        <h3>Logística</h3>
+        <p>Rápida y segura.</p>
+      </div>
+    </div>
+
+    <!-- Modal 1 -->
+    <div class="modal" id="modal1">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Tecnología</h2>
+        <img src="img/inicio/foto2.jpg" alt="Tecnología" />
+        <p>En esta sección puedes insertar una imagen o vídeo de nuestros productos tecnológicos.</p>
+      </div>
+    </div>
+
+        <!-- Modal 2 -->
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2>MODAL 2</h2>
+        <img src="img/inicio/foto2.jpg" alt="Tecnología" />
+        <p>En esta sección puedes insertar una imagen o vídeo de nuestros productos tecnológicos.</p>
+      </div>
+    </div>
+
+        <!-- Modal 3 -->
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2>MODAL 3</h2>
+        <img src="img/inicio/foto2.jpg" alt="Tecnología" />
+        <p>En esta sección puedes insertar una imagen o vídeo de nuestros productos tecnológicos.</p>
+      </div>
+    </div>
+
+      <!-- Modal 4 -->
+    <div class="modal" id="modal4">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <h2>Modal</h2>
+        <img src="img/inicio/foto2.jpg" alt="Tecnología" />
+        <p>En esta sección puedes insertar una imagen o vídeo de nuestros productos tecnológicos.</p>
+      </div>
+    </div>
+
+    </section>
   </main>
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+  <script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
   }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+  // Cierra modal al hacer clic fuera del contenido
+  window.onclick = function (event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  };
 </script>
+
 </body>
 </html>
