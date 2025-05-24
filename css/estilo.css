@@ -345,25 +345,6 @@
   width: 100%;
 }
 
-.lang-btn {
-  width: 100%;
-  text-align: left;
-  padding: 0.75rem 1rem;
-  border-top: 1px solid #eee;
-  background: #f8f8f8;
-}
-
-.lang-menu {
-  position: static;
-  box-shadow: none;
-  background: #f8f8f8;
-  border-radius: 0;
-}
-
-.lang-menu a {
-  padding-left: 2rem;
-}
-
 }
 .logo {
   font-size: 1.5rem;
@@ -372,92 +353,6 @@
   text-decoration: none; /* <- Esto elimina la línea */
 }
 
-.language-dropdown {
-  position: relative;
-}
-
-.lang-btn {
-  background: none;
-  border: none;
-  color: var(--text-color);
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-}
-
-.lang-btn:hover {
-  color: var(--main-color);
-}
-
-.lang-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 6px;
-  z-index: 20;
-}
-
-.lang-menu a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: var(--text-color);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.lang-menu a:hover {
-  background-color: #f0f0f0;
-  color: var(--main-color);
-}
-
-.language-dropdown:hover .lang-menu {
-  display: block;
-}
-.language-selector {
-  position: relative;
-  display: inline-block;
-}
-
-.language-selector button {
-  background: none;
-  border: none;
-  font-weight: 500;
-  color: var(--text-color);
-  cursor: pointer;
-}
-
-.language-selector button:hover {
-  color: var(--main-color);
-}
-
-.lang-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  min-width: 120px;
-  z-index: 100;
-}
-
-.lang-menu div {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.lang-menu div:hover {
-  background-color: #f0f0f0;
-}
-
-.lang-menu.hidden {
-  display: none;
-}
 
 /* ======= Sección Sobre Nosotros ======= */
 
@@ -564,29 +459,6 @@
   to {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-/* Responsive nav toggle */
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #1e1e2f;
-    padding: 1rem;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: rgb(0, 1, 68);
   }
 }
 
