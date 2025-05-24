@@ -341,10 +341,6 @@
   .components {
     grid-template-columns: repeat(4, 1fr);
   }
-  .language-dropdown {
-  width: 100%;
-}
-
 }
 .logo {
   font-size: 1.5rem;
@@ -462,6 +458,7 @@
   }
 }
 
+
 /* Modal base */
 .modal {
   display: none;
@@ -510,4 +507,39 @@
 }
 .close:hover {
   color: #e00;
+}
+
+.destacado {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.destacado h2 {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-destacado {
+  background-color: var(--main-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-destacado:hover {
+  background-color: #2c5282;
+  transform: translateY(-2px);
 }
