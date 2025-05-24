@@ -8,11 +8,12 @@
   * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+      font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   }
   
   body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     background-color: var(--light-bg);
     color: var(--text-color);
   }
@@ -137,7 +138,7 @@
     margin-top: 1.5rem;    /* Espaciado desde arriba */
     color: var(--main-color);        /* Color oscuro elegante */
     font-weight: 700;      /* Negrita */
-    font-family: 'Segoe UI', sans-serif; /* Fuente profesional */
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 
   }
@@ -542,4 +543,162 @@
 .btn-destacado:hover {
   background-color: #2c5282;
   transform: translateY(-2px);
+}
+
+
+/**/
+
+.about-highlight {
+  background-color: #e0f4ff; /* azul claro */
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.about-highlight.reverse {
+  background-color: white;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.about-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1 1 45%;
+}
+
+.about-text h2,
+.about-text h3 {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.about-image {
+  flex: 1 1 45%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  z-index: 1;
+}
+
+.image-wrapper img {
+  width: 100%;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.blob-background {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: #cceeff;
+  z-index: 0;
+  border-radius: 50% 40% 30% 60% / 60% 30% 40% 50%;
+  transform: rotate(15deg);
+}
+
+.about-image.square img {
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/**/
+.full-width-banner {
+  background-color: #e0f4ff;
+  padding: 4rem 2rem;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+    margin-bottom: 3rem; /* ajusta el valor según cuánto espacio quieras */
+  width: 100vw;
+}
+
+.full-width-banner .content-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.full-width-banner .text-column {
+  flex: 1 1 480px;
+  color: #1a202c;
+  animation: fadeInUp 1s ease-out;
+}
+
+.full-width-banner .text-column h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+.full-width-banner .text-column p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.full-width-banner .image-column {
+  flex: 1 1 400px;
+  position: relative;
+}
+
+.full-width-banner .image-column .blob {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background-color: #c0e8ff;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  z-index: 0;
+  filter: blur(20px);
+}
+
+.full-width-banner .image-column img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
